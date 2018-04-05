@@ -34,10 +34,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     <!-- Header -->
     @extends('layouts.header')
-
+   
     <!-- Sidebar -->
-     @extends('layouts.sidebar')
-
+    @include('sidebar')
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
@@ -56,13 +55,26 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
         <!-- Main content -->
         <section class="content">
-            <!-- Your Page Content Here -->
-            @yield('content')
-        </section><!-- /.content -->
+            <form action="/teachers" method="POST" role="form">
+            {{ csrf_field() }}
+            	<legend>Add a new Role</legend>
+            
+            	<div class="form-group">
+            		<label for="">Name</label>
+            		<input name="name" type="text" class="form-control" id="" placeholder="Enter Name">
+            	</div>
+                <div class="form-group">
+                    <label for="">Username</label>
+                    <input name="username" type="text" class="form-control" id="" placeholder="Enter Username">
+                </div>
+
+            	<button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+     </section><!-- /.content -->
     </div><!-- /.content-wrapper -->
 
     <!-- Footer -->
-    @extends('layouts.footer')
+    @include('footer')
 
 </div><!-- ./wrapper -->
 

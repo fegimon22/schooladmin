@@ -22,3 +22,6 @@ Route::get('admin', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//User Role Management
+Route::get('/userrole/create', 'RoleController@create');
