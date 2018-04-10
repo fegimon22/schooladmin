@@ -25,3 +25,12 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //User Role Management
 Route::get('/userrole/create', 'RoleController@create');
+
+//Class routes
+Route::get('/class/create','classController@index');
+Route::post('/class/create','classController@create');
+Route::get('/class/list','classController@show');
+Route::get('/class/edit/{id}','classController@edit');
+Route::post('/class/update','classController@update');
+Route::get('/class/delete/{id}','classController@delete');
+Route::get('/class/getsubjects/{class}','classController@getSubjects');
