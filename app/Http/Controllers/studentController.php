@@ -8,6 +8,7 @@ use Validator;
 use DB;
 
 use App\models\ClassModel;
+use App\models\Student;
 class foobar{
 
 }
@@ -208,7 +209,7 @@ public function getList()
 			$formdata->section=Input::get('section');
 			$formdata->shift=Input::get('shift');
 			$formdata->session=trim(Input::get('session'));
-			return View::Make("app.studentList", compact('students','classes','formdata'));
+			return view('student.studentList', compact('students','classes','formdata'));
 		}
 	}
 
@@ -225,7 +226,7 @@ public function view($id)
 	'Student.localGuardian','Student.parmanentAddress','Student.fourthSubject')
 	->where('Student.id','=',$id)->first();
 
-	return View::Make("app.studentView",compact('student'));
+	return view('student.studentView', compact('student'));
 }
 /**
 * Show the form for editing the specified resource.
@@ -237,7 +238,7 @@ public function edit($id)
 {
 	$classes = ClassModel::pluck('name','code');
 	$student= Student::find($id);
-	return View::Make("app.studentEdit",compact('student','classes'));
+	return view('student.studentEdit', compact('student','classes'));
 }
 
 

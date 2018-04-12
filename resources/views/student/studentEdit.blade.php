@@ -1,16 +1,28 @@
-@extends('layouts.master')
+@extends('layouts.app')
 @section('style')
-    <link href="<?php  echo url();?>/css/bootstrap-datepicker.css" rel="stylesheet">
+    <link href="{{ url('/')}}/css/bootstrap-datepicker.css" rel="stylesheet">
 @stop
 @section('content')
+<!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+       <i class="glyphicon glyphicon-user"></i>  Student New Admission
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="glyphicon glyphicon-user"></i> Home</a></li>
+        <li><a href="#">Student</a></li>
+        <li class="active"> Student New Admission</li>
+      </ol>
+    </section>
 
+    <!-- Main content -->
+    <section class="content">
     <div class="row">
         <div class="box col-md-12">
             <div class="box-inner">
-                <div data-original-title="" class="box-header well">
-                    <h2><i class="glyphicon glyphicon-user"></i> Student New Admission</h2>
-
-                </div>
+                
                 <div class="box-content">
                     @if (count($errors) > 0)
                         <div class="alert alert-danger">
@@ -439,8 +451,11 @@
         </div>
     </div>
 @stop
+  </section>
+    <!-- /.content -->
+  </div>
 @section('script')
-    <script src="<?php echo url();?>/js/bootstrap-datepicker.js"></script>
+    <script src="{{ url('/')}}/js/bootstrap-datepicker.js"></script>
     <script type="text/javascript">
 
         $( document ).ready(function() {
