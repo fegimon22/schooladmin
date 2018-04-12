@@ -1,12 +1,25 @@
-@extends('layouts.master')
+@extends('layouts.app')
 @section('content')
+<!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+       <i class="glyphicon glyphicon-book"></i>  Student Information
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="glyphicon glyphicon-book"></i> Home</a></li>
+        <li><a href="#">Student</a></li>
+        <li class="active"> Student Information</li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
   <div class="row">
     <div class="box col-md-12">
       <div class="box-inner">
-        <div data-original-title="" class="box-header well">
-          <h2><i class="glyphicon glyphicon-book"></i> Student Information</h2>
-
-        </div>
+        
         <div class="box-content">
           @if (isset($student))
             <div class="row">
@@ -23,7 +36,7 @@
               <div class="col-md-12">
                 <div class="col-md-4"></div>
                 <div class="col-md-4">
-                  <img class="img responsive-img" style="height:150px;width:200px;" src="<?php echo url();?>/images/{{$student->photo}}" alt="Photo">
+                  <img class="img responsive-img" style="height:150px;width:200px;" src="{{ url('/')}}/images/{{$student->photo}}" alt="Photo">
                 </div>
                 <div class="col-md-4"></div>
               </div>
@@ -336,6 +349,10 @@
       </div>
     </div>
   </div>
+  </section>
+    <!-- /.content -->
+  </div>
+  
 @stop
 @section('script')
   <script type="text/javascript">

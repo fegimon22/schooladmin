@@ -106,7 +106,7 @@
                   <label for="regiNo">Registration No</label>
                   <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-info-sign blue"></i></span>
-                    <input type="text" id="regiNo" readOnly class="form-control" required name="regiNo" value="" placeholder="">
+                    <input type="text" id="regiNo"  class="form-control" required name="regiNo" value="" placeholder="">
                   </div>
                 </div>
               </div>
