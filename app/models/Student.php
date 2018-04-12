@@ -1,0 +1,34 @@
+<?php
+
+namespace App\models;
+use Illuminate\Database\Eloquent\Model;
+class Student extends Model {
+	protected $table = 'Student';
+	protected $fillable = ['regiNo',
+	'firstName',
+	'lastName',
+	'middleName',
+	'gender',
+	'religion',
+	'bloodgroup',
+	'nationality',
+	'dob',
+	'session',
+	'class',
+	'photo',
+	'fatherName',
+	'fatherCellNo',
+	'motherName',
+	'motherCellNo',
+   'presentAddress',
+   'parmanentAddress',
+   'fourthSubject'
+	];
+	protected $primaryKey = 'id';
+	public function attendance(){
+		$this->primaryKey = "regiNo";
+    return $this->hasMany('Attendance','regiNo');
+  }
+	
+
+}

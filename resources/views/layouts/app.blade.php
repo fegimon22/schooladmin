@@ -29,7 +29,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
 </head>
-<body class="skin-blue">
+<body class="skin-blue sidebar-mini">
 <div class="wrapper">
 
    <!-- Main Header -->
@@ -200,7 +200,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <img src="{{ asset("/bower_components/admin-lte/dist/img/user2-160x160.jpg") }}" class="img-circle" alt="User Image" />
             </div>
             <div class="pull-left info">
-                <p>Alexander Pierce</p>
+                <p>{{ Auth::user()->name }}</p>
                 <!-- Status -->
                 <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
@@ -219,15 +219,30 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
         <!-- Sidebar Menu -->
         <ul class="sidebar-menu">
-            <li class="header">UserManagement</li>
             <!-- Optionally, you can add icons to the links -->
-            <li class="active"><a href="#"><span>Class Management</span></a></li>
-            <li><a href="class/create"><span>Add Class</span></a></li>
+            <li class="active"><a href="/home"><i class="glyphicon glyphicon-th-large"></i><span>Dashboard</span></a></li>
             <li class="treeview">
-                <a href="#"><span>Multilevel</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <a href="#"><i class="glyphicon glyphicon-home"></i><span>Class</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="#">Link in level 2</a></li>
-                    <li><a href="#">Link in level 2</a></li>
+                    <li><a href="/class/create">Add New</a></li>
+                    <li><a href="/class/list">Class List</a></li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#"><i class="glyphicon glyphicon-book"></i><span>Subject</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <ul class="treeview-menu">
+                    <li><a href="/subject/create">Add New</a></li>
+                    <li><a href="/subject/list">Subject List</a></li>
+                </ul>
+            </li>
+             <li class="treeview">
+                <a href="/gpa"><i class="glyphicon glyphicon-education"></i><span>GPA</span></a>
+            </li>
+            <li class="treeview">
+                <a href="#"><i class="glyphicon glyphicon-user"></i><span>Student</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <ul class="treeview-menu">
+                    <li><a href="/student/create">Add New</a></li>
+                    <li><a href="/student/list">Student List</a></li>
                 </ul>
             </li>
         </ul><!-- /.sidebar-menu -->
