@@ -64,3 +64,17 @@ Route::get('/student/edit/{id}','studentController@edit');
 Route::post('/student/update','studentController@update');
 Route::get('/student/delete/{id}','studentController@delete');
 Route::get('/student/getList/{class}/{section}/{shift}/{session}','studentController@getForMarks');
+
+//student attendance
+Route::get('/attendance/create','attendanceController@index');
+Route::post('/attendance/create','attendanceController@create');
+Route::get('/attendance/create-file','attendanceController@index_file');
+Route::post('/attendance/create-file','attendanceController@create_file');
+Route::get('/attendance/list','attendanceController@show');
+Route::post('/attendance/list','attendanceController@getlist');
+Route::get('/attendance/edit/{id}','attendanceController@edit');
+Route::post('/attendance/update','attendanceController@update');
+Route::get('/attendance/printlist/{class}/{section}/{shift}/{session}/{date}','attendanceController@printlist');
+Route::get('/attendance/report','attendanceController@report');
+Route::post('/attendance/report','attendanceController@getReport');
+Route::get('/attendance/monthly-report','attendanceController@monthlyReport');
