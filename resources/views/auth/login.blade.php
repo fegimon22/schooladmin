@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Log in</title>
+  <title>ACME Learning Center - Admin Portal</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -31,16 +31,16 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="{{ route('login') }}"><b>Admin</b>Login</a>
+    <a href="{{ route('login') }}"><b><img src="{{ asset('/img/acme_learning_center.png') }}" /></a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
-    <p class="login-box-msg">Sign in to start your session</p>
+    <p class="login-box-msg">Login to Portal</p>
 
     <form action="{{ route('login') }}" method="post">
 	{{ csrf_field() }}
       <div class="form-group has-feedback">
-        <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>                    
+        <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>                    
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
 		 @if ($errors->has('email'))
                                     <span class="help-block">
