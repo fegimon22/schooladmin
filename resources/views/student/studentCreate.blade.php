@@ -371,7 +371,7 @@
                 <label for="localGuardian">Local Guardian Name </label>
                 <div class="input-group">
                   <span class="input-group-addon"><i class="glyphicon glyphicon-info-sign blue"></i></span>
-                  <input type="text" class="form-control"  name="localGuardian" placeholder="Name">
+                  <input type="text" class="form-control" required  name="localGuardian" placeholder="Name">
                 </div>
               </div>
             </div>
@@ -380,7 +380,7 @@
                 <label for="localGuardianCell">local Guardian Mobile No </label>
                 <div class="input-group">
                   <span class="input-group-addon"><i class="glyphicon glyphicon-info-sign blue"></i></span>
-                  <input type="text" class="form-control"  name="localGuardianCell" placeholder="+8801xxxxxxxxx">
+                  <input type="text" class="form-control" required  name="localGuardianCell" placeholder="+8801xxxxxxxxx">
                 </div>
               </div>
             </div>
@@ -435,9 +435,8 @@
 </section>
     <!-- /.content -->
   </div>
-@stop
-@section('script')
-<script src="{{ url('/')}}/js/bootstrap-datepicker.js"></script>
+
+@stack('scripts')
 <script type="text/javascript">
  var getStdRegiRollNo = function(){
    var aclass = $('#class').val();

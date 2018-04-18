@@ -8,6 +8,7 @@ use Auth;
 use Validator;
 
 use App\models\ClassModel;
+use App\models\Subject;
 
 class classController extends Controller {
 

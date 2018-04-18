@@ -213,9 +213,7 @@
       </section>
     <!-- /.content -->
   </div>
-@stop
-
- @section('javascript')   
+@stack('scripts')   
     <script type="text/javascript">
         jQuery( document ).ready(function() {
 			

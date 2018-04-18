@@ -30,6 +30,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
+    <!-- REQUIRED JS SCRIPTS -->
+
+<!-- jQuery 2.1.3 -->
+<script src="{{ asset ("/bower_components/jquery/dist/jQuery-2.1.3.min.js") }}"></script>
+<!-- Bootstrap 3.3.2 JS -->
+<script src="{{ asset ("/bower_components/bootstrap/dist/js/bootstrap.min.js") }}" type="text/javascript"></script>
+<!-- AdminLTE App -->
+<script src="{{ asset ("/bower_components/admin-lte/dist/js/app.min.js") }}" type="text/javascript"></script>
+
+<script src="{{ asset("/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js")}}"></script>
+<script src="{{ asset("/bower_components/datatables.net/js/jquery.dataTables.js")}}"></script>
+<!-- Optionally, you can add Slimscroll and FastClick plugins.
+      Both of these plugins are recommended to enhance the
+      user experience -->
 </head>
 <body class="skin-blue sidebar-mini">
 <div class="wrapper">
@@ -255,6 +269,21 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <li><a href="/attendance/list">Student List</a></li>
                 </ul>
             </li>
+            <li class="treeview">
+                <a href="#"><i class="glyphicon glyphicon-list-alt"></i><span>Mark Manage</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <ul class="treeview-menu">
+                    <li><a href="/mark/create">Add New</a></li>
+                    <li><a href="/mark/list">Marks List</a></li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#"><i class="glyphicon glyphicon-list"></i><span>Result</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <ul class="treeview-menu">
+                    <li><a href="/result/generate">Generate</a></li>
+                    <li><a href="/result/search">Search</a></li>
+                    <li><a href="/results">Search Public</a></li>
+                </ul>
+            </li>
         </ul><!-- /.sidebar-menu -->
     </section>
     <!-- /.sidebar -->
@@ -273,19 +302,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 </div><!-- ./wrapper -->
 
-<!-- REQUIRED JS SCRIPTS -->
 
-<!-- jQuery 2.1.3 -->
-<script src="{{ asset ("/bower_components/jquery/dist/jQuery-2.1.3.min.js") }}"></script>
-<!-- Bootstrap 3.3.2 JS -->
-<script src="{{ asset ("/bower_components/bootstrap/dist/js/bootstrap.min.js") }}" type="text/javascript"></script>
-<!-- AdminLTE App -->
-<script src="{{ asset ("/bower_components/admin-lte/dist/js/app.min.js") }}" type="text/javascript"></script>
-
-<script src="{{ asset("/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js")}}"></script>
-<!-- Optionally, you can add Slimscroll and FastClick plugins.
-      Both of these plugins are recommended to enhance the
-      user experience -->
  
 </body>
 </html>
