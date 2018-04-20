@@ -240,15 +240,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <li class="treeview">
                 <a href="#"><i class="glyphicon glyphicon-home"></i><span>Class</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="/class/create">Add New</a></li>
-                    <li><a href="/class/list">Class List</a></li>
+                    <li><a href="class/create">Add New</a></li>
+                    <li><a href="class/list">Class List</a></li>
                 </ul>
             </li>
             <li class="treeview">
                 <a href="#"><i class="glyphicon glyphicon-book"></i><span>Subject</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="/subject/create">Add New</a></li>
-                    <li><a href="/subject/list">Subject List</a></li>
+                    <li><a href="subject/create">Add New</a></li>
+                    <li><a href="subject/list">Subject List</a></li>
                 </ul>
             </li>
              <li class="treeview">
@@ -257,31 +257,31 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <li class="treeview">
                 <a href="#"><i class="glyphicon glyphicon-user"></i><span>Student</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="/student/create">Add New</a></li>
-                    <li><a href="/student/list">Student List</a></li>
+                    <li><a href="student/create">Add New</a></li>
+                    <li><a href="student/list">Student List</a></li>
                 </ul>
             </li>
             <li class="treeview">
                 <a href="#"><i class="glyphicon glyphicon-pencil"></i><span>Attendance</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                	<li><a href="/attendance/create-file">Add from file</a></li>
-                    <li><a href="/attendance/create">Add New</a></li>
-                    <li><a href="/attendance/list">Student List</a></li>
+                	<li><a href="attendance/create-file">Add from file</a></li>
+                    <li><a href="attendance/create">Add New</a></li>
+                    <li><a href="attendance/list">Student List</a></li>
                 </ul>
             </li>
             <li class="treeview">
                 <a href="#"><i class="glyphicon glyphicon-list-alt"></i><span>Mark Manage</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="/mark/create">Add New</a></li>
-                    <li><a href="/mark/list">Marks List</a></li>
+                    <li><a href="mark/create">Add New</a></li>
+                    <li><a href="mark/list">Marks List</a></li>
                 </ul>
             </li>
             <li class="treeview">
                 <a href="#"><i class="glyphicon glyphicon-list"></i><span>Result</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="/result/generate">Generate</a></li>
-                    <li><a href="/result/search">Search</a></li>
-                    <li><a href="/results">Search Public</a></li>
+                    <li><a href="result/generate">Generate</a></li>
+                    <li><a href="result/search">Search</a></li>
+                    <li><a href="results">Search Public</a></li>
                 </ul>
             </li>
             <li class="treeview">
@@ -290,20 +290,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <li class="treeview">
                 <a href="#"><i class="glyphicon glyphicon-list-alt"></i><span>Accounting</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="/accounting/sectors">Sectors</a></li>
-                    <li><a href="/accounting/income">Add Income</a></li>
-                    <li><a href="/accounting/incomelist">View Income</a></li>
-                    <li><a href="/accounting/expence">Add Expence</a></li>
-                    <li><a href="/accounting/expencelist">View Expence</a></li>
+                    <li><a href="accounting/sectors">Sectors</a></li>
+                    <li><a href="accounting/income">Add Income</a></li>
+                    <li><a href="accounting/incomelist">View Income</a></li>
+                    <li><a href="accounting/expence">Add Expence</a></li>
+                    <li><a href="accounting/expencelist">View Expence</a></li>
                 </ul>
             </li>
              @if (Session::get('userRole')=="Admin")
              <li class="treeview">
                 <a href="#"><i class="glyphicon glyphicon-cog"></i><span>Settings</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="/gpa">GPA Ruels</a></li>
-                    <li><a href="/users">Users</a></li>
-                    <li><a href="/institute">Institute</a></li>
+                    <li><a href="gpa">GPA Ruels</a></li>
+                    <li><a href="users">Users</a></li>
+                    <li><a href="institute">Institute</a></li>
                 </ul>
             </li>
              @endif
