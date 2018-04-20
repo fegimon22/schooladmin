@@ -284,6 +284,29 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <li><a href="/results">Search Public</a></li>
                 </ul>
             </li>
+            <li class="treeview">
+                <a href="/promotion"><i class="glyphicon glyphicon-arrow-up"></i><span>Promotion</span></a>
+            </li>
+            <li class="treeview">
+                <a href="#"><i class="glyphicon glyphicon-list-alt"></i><span>Accounting</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <ul class="treeview-menu">
+                    <li><a href="/accounting/sectors">Sectors</a></li>
+                    <li><a href="/accounting/income">Add Income</a></li>
+                    <li><a href="/accounting/incomelist">View Income</a></li>
+                    <li><a href="/accounting/expence">Add Expence</a></li>
+                    <li><a href="/accounting/expencelist">View Expence</a></li>
+                </ul>
+            </li>
+             @if (Session::get('userRole')=="Admin")
+             <li class="treeview">
+                <a href="#"><i class="glyphicon glyphicon-cog"></i><span>Settings</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <ul class="treeview-menu">
+                    <li><a href="/gpa">GPA Ruels</a></li>
+                    <li><a href="/users">Users</a></li>
+                    <li><a href="/institute">Institute</a></li>
+                </ul>
+            </li>
+             @endif
         </ul><!-- /.sidebar-menu -->
     </section>
     <!-- /.sidebar -->
