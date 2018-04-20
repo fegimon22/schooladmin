@@ -37,16 +37,23 @@
   <div class="login-box-body">
     <p class="login-box-msg">Login to Portal</p>
 
-    <form action="{{ route('login') }}" method="post">
-	{{ csrf_field() }}
+    <form action="users/login" method="post">
+	<input type="hidden" name="_token" value="{{ csrf_token() }}">
       <div class="form-group has-feedback">
-        <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>                    
+        <input id="email" type="text" class="form-control" name="login" value="{{ old('login') }}" required>                    
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
 		 @if ($errors->has('email'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('email') }}</strong>
                                     </span>
                                 @endif
+                                 @if (Session::get('message'))
+                    <div class="alert alert-success text-center">
+                        <button data-dismiss="alert" class="close" type="button">×</button>
+                        <strong> {{ Session::get('message')}} </strong>
+
+                    </div>
+                @endif
       </div>
       <div class="form-group has-feedback">
         <input id="password" type="password" class="form-control" name="password" required>

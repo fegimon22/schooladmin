@@ -21,10 +21,19 @@ Route::get('admin', function () {
 
 Auth::routes();
 
+//Dashboard
 Route::get('/home', 'HomeController@index')->name('home');
 
-//User Role Management
-Route::get('/userrole/create', 'RoleController@create');
+//User
+Route::post('/users/login','UsersController@postSignin');
+Route::get('/users/logout','UsersController@getLogout');
+Route::get('/users','UsersController@show');
+Route::post('/usercreate','UsersController@create');
+Route::get('/useredit/{id}','UsersController@edit');
+Route::post('/userupdate','UsersController@update');
+Route::get('/userdelete/{id}','UsersController@delete');
+
+
 
 //Class routes
 Route::get('/class/create','classController@index');
