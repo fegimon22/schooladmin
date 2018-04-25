@@ -153,3 +153,42 @@ Route::post('/settings','settingsController@save');
 
 Route::get('/institute','instituteController@index');
 Route::post('/institute','instituteController@save');
+
+//Fees Related routes
+
+Route::get('/fees/setup','feesController@getsetup');
+Route::post('/fees/setup','feesController@postsetup');
+Route::get('/fees/list','feesController@getList');
+Route::post('/fees/list','feesController@postList');
+
+Route::get('/fee/edit/{id}','feesController@getEdit');
+Route::post('/fee/edit','feesController@postEdit');
+Route::get('/fee/delete/{id}','feesController@getDelete');
+
+Route::get('/fee/collection','feesController@getCollection');
+Route::post('/fee/collection','feesController@postCollection');
+Route::get('/fee/getListjson/{class}/{type}','feesController@getListjson');
+Route::get('/fee/getFeeInfo/{id}','feesController@getFeeInfo');
+Route::get('/fee/getDue/{class}/{stdId}','feesController@getDue');
+
+Route::get('/fees/view','feesController@stdfeeview');
+Route::post('/fees/view','feesController@stdfeeviewpost');
+Route::get('/fees/delete/{billNo}','feesController@stdfeesdelete');
+
+Route::get('/fees/report','feesController@report');
+Route::get('/fees/report/std/{regiNo}','feesController@reportstd');
+Route::get('/fees/report/{sDate}/{eDate}','feesController@reportprint');
+
+
+Route::get('/fees/details/{billNo}','feesController@billDetails');
+
+//Admisstion routes
+Route::get('/regonline','admissionController@regonline');
+Route::post('/regonline','admissionController@Postregonline');
+Route::get('/applicants','admissionController@applicants');
+Route::post('/applicants','admissionController@postapplicants');
+Route::get('/applicants/view/{id}','admissionController@applicantview');
+Route::get('/applicants/payment','admissionController@payment');
+Route::get('/applicants/delete/{id}','admissionController@delete');
+Route::get('/admitcard','admissionController@admitcard');
+Route::post('/printadmitcard','admissionController@printAdmitCard');

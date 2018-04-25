@@ -6,7 +6,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>{{ $page_title or "AdminLTE Dashboard" }}</title>
+    <title>{{ $page_title or ucfirst(Session::get('inName')) }}</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- Bootstrap 3.3.2 -->
     <link href="{{ asset("/bower_components/bootstrap/dist/css/bootstrap.min.css") }}" rel="stylesheet" type="text/css" />
@@ -52,7 +52,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <header class="main-header">
 
     <!-- Logo -->
-    <a href="/home" class="logo"><b>Admin</b>LTE</a>
+    <a href="/home" class="logo"><b>{{ucfirst(Session::get('inName'))}}</b></a>
 
     <!-- Header Navbar -->
     <nav class="navbar navbar-static-top" role="navigation">
@@ -306,7 +306,25 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <li><a href="institute">Institute</a></li>
                 </ul>
             </li>
+            <li class="treeview">
+                <a href="#"><i class="glyphicon glyphicon-list-alt"></i><span>Fees</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <ul class="treeview-menu">
+                    <li><a href="fees/view">Student Fees</a></li>
+                    <li><a href="fee/collection">Fees Collection</a></li>
+                    <li><a href="fees/list">Fees List</a></li>
+                    <li><a href="fees/setup">Fees Setup</a></li>
+                    <li><a href="fees/report">Fees Collection Report</a></li>
+                </ul>
+            </li>
              @endif
+             <li class="treeview">
+                <a href="#"><i class="glyphicon glyphicon-cog"></i><span>Admission</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <ul class="treeview-menu">
+                    <li><a href="applicants">Applicant List</a></li>
+                    <li><a href="regonline">Online Registration</a></li>
+                    <li><a href="admitcard">Print  Admitcard</a></li>
+                </ul>
+            </li>
         </ul><!-- /.sidebar-menu -->
     </section>
     <!-- /.sidebar -->
