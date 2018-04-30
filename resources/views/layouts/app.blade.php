@@ -318,7 +318,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </li>
              @endif
              <li class="treeview">
-                <a href="#"><i class="glyphicon glyphicon-cog"></i><span>Admission</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <a href="#"><i class="glyphicon glyphicon-th-large"></i><span>Admission</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
                     <li><a href="applicants">Applicant List</a></li>
                     <li><a href="regonline">Online Registration</a></li>
